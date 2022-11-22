@@ -25,6 +25,10 @@ Route::get('/', function () {
     ]);
 });
 
+Route::get('/test', function () {
+    return asset('image/Homepage/logo.png');
+});
+
 Route::get('/home', function () {
     return Inertia::render('Homepage');
 });
