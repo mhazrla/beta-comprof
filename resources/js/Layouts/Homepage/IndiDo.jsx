@@ -1,17 +1,13 @@
-const Content = () => {
+const Content = (props) => {
     return (
         <div className="max-w-lg sm:mx-auto md:max-w-none">
-            <div className="grid grid-cols-3 relative gap-6 ">
-                <img
-                    src="https://ouch-cdn2.icons8.com/FLxcYK0EgIyTpjAaRqyplxvFuJ9hNa7xoR5jgVcczeY/rs:fit:256:250/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9wbmcvODgx/LzFhYWE2Y2ZiLTI4/ZmMtNDBjZS05NzM1/LTQzNmI1MmNjOTU1/ZS5wbmc.png"
-                    alt=""
-                    className="w-fit mx-auto my-auto"
-                />
-                <div className="bg-red-100 col-span-2 flex flex-col justify-center text-center rounded-3xl  p-4 md:p-9">
+            <div className="grid md:grid-cols-2 relative gap-6">
+                <img src={props.do.do_1} alt="" className=" mx-auto my-auto" />
+                <div className="bg-red-100 flex flex-col justify-center text-center rounded-3xl p-4 md:p-9">
                     <p className="font-semibold leading-8 md:text-4xl sm:text-2xl text-text-secondary">
                         We are Integrated Marketing Communication Agency
                     </p>
-                    <p className="mt-2 leading-7 md:text-xl text-text-third">
+                    <p className="mt-2 leading-7 md:text-xl  text-text-third">
                         We bring extraordinary ideas and ready to go
                     </p>
                     <p className="leading-7 md:text-xl text-text-third">
@@ -19,8 +15,8 @@ const Content = () => {
                     </p>
                 </div>
             </div>
-            <div className="grid grid-cols-3 relative gap-6 mt-12">
-                <div className="bg-red-100 col-span-2 flex flex-col justify-center text-center rounded-3xl  p-4 md:p-9">
+            <div className="grid md:grid-cols-2 relative gap-6 mt-12">
+                <div className="bg-red-100 flex flex-col justify-center text-center rounded-3xl  p-4 md:p-9">
                     <p className="font-semibold leading-8 md:text-4xl sm:text-2xl text-text-secondary">
                         Go beyond design
                     </p>
@@ -31,18 +27,13 @@ const Content = () => {
                         dedication to bring your company to the top
                     </p>
                 </div>
-                <img
-                    src="https://ouch-cdn2.icons8.com/FLxcYK0EgIyTpjAaRqyplxvFuJ9hNa7xoR5jgVcczeY/rs:fit:256:250/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9wbmcvODgx/LzFhYWE2Y2ZiLTI4/ZmMtNDBjZS05NzM1/LTQzNmI1MmNjOTU1/ZS5wbmc.png"
-                    alt=""
-                    className="w-fit mx-auto my-auto"
-                />
+                <img src={props.do.do_2} alt="" className="mx-auto my-auto" />
             </div>
         </div>
     );
 };
 
 export default function IndiDo({ asset }) {
-    console.log(asset);
     return (
         <div className="bg-white py-24 sm:py-32 lg:py-40">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -61,7 +52,7 @@ export default function IndiDo({ asset }) {
                         <p>IND! Work?</p>
                     </div>
                 </div>
-                <Content />
+                <Content do={asset} />
             </div>
         </div>
     );
