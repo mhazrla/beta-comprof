@@ -1,4 +1,5 @@
 import Navbar from "@/Components/Navbar";
+import Contact from "@/Layouts/Homepage/Contact";
 import Hero from "@/Layouts/Homepage/Hero";
 import IndiDo from "@/Layouts/Homepage/IndiDo";
 import { usePage } from "@inertiajs/inertia-react";
@@ -20,6 +21,7 @@ const Homepage = () => {
             <Navbar />
             <Hero asset={image} />
             <IndiDo asset={image} />
+            <Contact asset={image} />
         </div>
     );
 };

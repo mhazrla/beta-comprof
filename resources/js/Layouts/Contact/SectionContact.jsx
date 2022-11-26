@@ -4,25 +4,25 @@ import React from "react";
 export default function SectionContact() {
     return (
         <div className="flex items-center justify-between px-8">
-            <div className="text-3xl font-bold tracking-tight text-gray-700 sm:text-4xl">
-                <span className="block text-8xl">IND!</span>
-                <span className="block text-7xl">Communication</span>
+            <div className=" font-bold tracking-tight text-gray-700 sm:text-4xl">
+                <span className="block text-5xl">IND!</span>
+                <span className="block text-3xl">Communication</span>
                 <span className="block text-gray-700 text-2xl">
                     We’d Love to Hear from You. Let’s Get in Touch.
                 </span>
                 <div className="flex-col mt-3">
-                    <div className="flex w-auto items-end gap-4">
+                    <div className="flex w-96 items-end gap-4">
                         <Input variant="standard" placeholder="Name *" />
                         <Input variant="standard" placeholder="Email *" />
                     </div>
-                    <div className="flex w-auto items-end gap-4">
+                    <div className="flex w-96 items-end gap-4">
                         <Input variant="standard" placeholder="Phone *" />
                         <Input
                             variant="standard"
                             placeholder="Your Company *"
                         />
                     </div>
-                    <div className="flex flex-col w-auto items-end gap-4 mt-1">
+                    <div className="flex flex-col w-96 items-end gap-4 mt-1">
                         <Input variant="standard" placeholder="Message *" />
                     </div>
                     <div className="">
