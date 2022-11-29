@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use Inertia\Inertia;
 use App\Models\Contacts;
 use Illuminate\Http\Request;
+use App\Http\Resources\ContactsCollection;
 
 class ContactsController extends Controller
 {
@@ -14,7 +16,11 @@ class ContactsController extends Controller
      */
     public function index()
     {
-        //
+        $contacts = new ContactsCollection(Contacts::paginate(8));
+
+        return Inertia::render('Contact/Index', [
+            'contacts' => $contacts
+        ]);
     }
 
     /**
@@ -35,7 +41,16 @@ class ContactsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validated = $request->validate([
+            'name' => ['required'],
+            'email' => ['required'],
+            'phone' => ['required'],
+            'company' => ['required'],
+            'message' => ['required'],
+        ]);
+        $contact = Contacts::create($validated);
+
+        return redirect()->back()->with('success', 'Send Success!');
     }
 
     /**
