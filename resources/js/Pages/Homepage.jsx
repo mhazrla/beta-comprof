@@ -3,7 +3,6 @@ import Hero from "@/Layouts/Homepage/Hero";
 import IndiDo from "@/Layouts/Homepage/IndiDo";
 import News from "@/Layouts/Homepage/News";
 import Portofolio from "@/Layouts/Homepage/Portfolio";
-import Services from "@/Layouts/Homepage/Services";
 import { usePage } from "@inertiajs/inertia-react";
 import React from "react";
 
@@ -23,7 +22,7 @@ const Homepage = () => {
 
     return (
         <div>
-            <Navbar />
+            <Navbar asset={image} />
             <Hero asset={image} />
             <IndiDo asset={image} />
             <Portofolio />
