@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -26,10 +27,7 @@ Route::get('/', function () {
     ]);
 });
 
-
-Route::get('/home', function () {
-    return Inertia::render('Homepage');
-})->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 Route::prefix('article')->controller(ArticleController::class)->name('article.')
     ->group(function () {
@@ -44,6 +42,10 @@ Route::prefix('article')->controller(ArticleController::class)->name('article.')
 
 
 Route::get('/dashboard', [ArticleController::class, 'dashboard'])->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::get('/contact', function () {
+    return Inertia::render('ContactUs');
+})->name('contact');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
