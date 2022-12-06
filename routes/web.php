@@ -43,10 +43,6 @@ Route::prefix('article')->controller(ArticleController::class)->name('article.')
     });
 
 
-Route::get('/contact', function () {
-    return Inertia::render('ContactUs');
-});
-
 Route::get('/dashboard', [ArticleController::class, 'dashboard'])->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
