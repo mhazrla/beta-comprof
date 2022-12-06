@@ -67,7 +67,10 @@ export default function Example({ asset }) {
                 color="blue-gray"
                 className="p-1 font-bold"
             >
-                <a href="#" className="flex items-center text-xl">
+                <a
+                    href={route("contact")}
+                    className="flex items-center text-xl"
+                >
                     Contact
                 </a>
             </Typography>

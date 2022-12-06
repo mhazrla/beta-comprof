@@ -8,7 +8,6 @@ import {
 } from "@material-tailwind/react";
 
 const isArticle = (article) => {
-    console.log(article);
     return article.map((data, i) => {
         return (
             <Card

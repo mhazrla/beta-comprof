@@ -1,6 +1,6 @@
 import ArticleList from "../Article/ArticleList";
 
-export default function IndiDo({ asset }) {
+export default function IndiDo({ asset, article }) {
     return (
         <div className="bg-white pt-4 pb-16">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -22,10 +22,7 @@ export default function IndiDo({ asset }) {
                         </div>
                     </div>
                     <div className="grid md:grid-cols-3 relative gap-6">
-                        <ArticleList />
-                        <ArticleList />
-                        <ArticleList />
-                        <ArticleList />
+                        <ArticleList article={article} />
                     </div>
                 </div>
             </div>
