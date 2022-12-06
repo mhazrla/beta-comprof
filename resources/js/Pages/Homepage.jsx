@@ -1,10 +1,8 @@
 import Navbar from "@/Components/Navbar";
-import Contact from "@/Layouts/Homepage/Contact";
 import Hero from "@/Layouts/Homepage/Hero";
 import IndiDo from "@/Layouts/Homepage/IndiDo";
 import News from "@/Layouts/Homepage/News";
 import Portofolio from "@/Layouts/Homepage/Portfolio";
-
 import { usePage } from "@inertiajs/inertia-react";
 import React from "react";
 
@@ -25,26 +23,19 @@ const Homepage = (props) => {
         icons: asset + "/image/Homepage/icons.png",
         telp: asset + "/image/Homepage/telp.png",
         email: asset + "/image/Homepage/email.png",
-<<<<<<< HEAD
-=======
 
->>>>>>> 9031953c9e0c267f72e743d8727ecddeb7b50d50
     };
 
     return (
         <div>
-
             <Navbar asset={image} />
             <Hero asset={image} />
             <IndiDo asset={image} />
             <Portofolio />
-<<<<<<< HEAD
             <News asset={image} article={article} />
-=======
-            <News asset={image} />
 
->>>>>>> 9031953c9e0c267f72e743d8727ecddeb7b50d50
             <Contact asset={image} />
+
         </div>
     );
 };
