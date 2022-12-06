@@ -39,6 +39,7 @@ const CardNews = () => {
         </Card>
     );
 };
+import ArticleList from "../Article/ArticleList";
 
 export default function IndiDo({ asset }) {
     return (
@@ -62,9 +63,10 @@ export default function IndiDo({ asset }) {
                         </div>
                     </div>
                     <div className="grid md:grid-cols-3 relative gap-6">
-                        <CardNews />
-                        <CardNews />
-                        <CardNews />
+                        <ArticleList />
+                        <ArticleList />
+                        <ArticleList />
+                        <ArticleList />
                     </div>
                 </div>
             </div>

@@ -8,10 +8,8 @@ const Content = (props) => {
                         We are Integrated Marketing Communication Agency
                     </p>
                     <p className="mt-2 leading-7 md:text-xl  text-text-third">
-                        We bring extraordinary ideas and ready to go
-                    </p>
-                    <p className="leading-7 md:text-xl text-text-third">
-                        an extra mile
+                        We bring extraordinary ideas and ready to go an extra
+                        mile
                     </p>
                 </div>
             </div>

@@ -6,7 +6,7 @@ import {
     IconButton,
 } from "@material-tailwind/react";
 
-export default function Example() {
+export default function Example({ asset }) {
     const [openNav, setOpenNav] = useState(false);
 
     useEffect(() => {
@@ -24,7 +24,7 @@ export default function Example() {
                 color="blue-gray"
                 className="p-1 font-bold"
             >
-                <a href="#" className="flex items-center text-xl">
+                <a href={route("home")} className="flex items-center text-xl">
                     Home
                 </a>
             </Typography>
@@ -44,7 +44,10 @@ export default function Example() {
                 color="blue-gray"
                 className="p-1 font-bold"
             >
-                <a href="#" className="flex items-center text-xl">
+                <a
+                    href={route("article.index")}
+                    className="flex items-center text-xl"
+                >
                     Article
                 </a>
             </Typography>
@@ -80,14 +83,13 @@ export default function Example() {
                     variant="small"
                     className="mr-4 cursor-pointer py-1.5 font-bold"
                 >
-                    {/* <span>Material Tailwind</span> */}
                     <img
-                        src="https://indi.marketing/wp-content/uploads/2019/03/indicomm.png"
+                        src={asset.logo}
                         alt="Indi Communication"
                         className="img w-1/2"
                     />
                 </Typography>
-                <div className="hidden lg:block">{navList}</div>
+                <div className="hidden lg:block ">{navList}</div>
 
                 <IconButton
                     variant="text"

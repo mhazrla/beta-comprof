@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -25,21 +26,28 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/test', function () {
-    return asset('image/Homepage/logo.png');
-});
 
 Route::get('/home', function () {
     return Inertia::render('Homepage');
-});
+})->name('home');
+
+Route::prefix('article')->controller(ArticleController::class)->name('article.')
+    ->group(function () {
+        Route::get('/', 'index')->name('index');
+        Route::get('create', 'create')->name('create')->middleware(['auth']);
+        Route::post('/store', 'store')->name('store')->middleware(['auth']);
+        Route::get('{article}/', 'show')->name('show');
+        Route::get('{article}/edit', 'edit')->name('edit')->middleware(['auth']);
+        Route::patch('{article}', 'update')->name('update')->middleware(['auth']);
+        Route::delete('{article}', 'destroy')->name('destroy')->middleware(['auth']);
+    });
+
 
 Route::get('/contact', function () {
     return Inertia::render('ContactUs');
 });
 
-Route::get('/dashboard', function () {
-    return Inertia::render('Dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/dashboard', [ArticleController::class, 'dashboard'])->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
