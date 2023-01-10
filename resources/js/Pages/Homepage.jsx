@@ -1,10 +1,8 @@
 import Navbar from "@/Components/Navbar";
-import Contact from "@/Layouts/Homepage/Contact";
 import Hero from "@/Layouts/Homepage/Hero";
 import IndiDo from "@/Layouts/Homepage/IndiDo";
 import News from "@/Layouts/Homepage/News";
 import Portofolio from "@/Layouts/Homepage/Portfolio";
-
 import { usePage } from "@inertiajs/inertia-react";
 import React from "react";
 
@@ -34,6 +32,7 @@ const Homepage = (props) => {
             <IndiDo asset={image} />
             <Portofolio />
             <News asset={image} article={article} />
+
             <Contact asset={image} />
         </div>
     );
