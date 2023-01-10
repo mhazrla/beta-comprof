@@ -25,25 +25,15 @@ const Homepage = (props) => {
         icons: asset + "/image/Homepage/icons.png",
         telp: asset + "/image/Homepage/telp.png",
         email: asset + "/image/Homepage/email.png",
-<<<<<<< HEAD
-=======
-
->>>>>>> 9031953c9e0c267f72e743d8727ecddeb7b50d50
     };
 
     return (
         <div>
-
             <Navbar asset={image} />
             <Hero asset={image} />
             <IndiDo asset={image} />
             <Portofolio />
-<<<<<<< HEAD
             <News asset={image} article={article} />
-=======
-            <News asset={image} />
-
->>>>>>> 9031953c9e0c267f72e743d8727ecddeb7b50d50
             <Contact asset={image} />
         </div>
     );
